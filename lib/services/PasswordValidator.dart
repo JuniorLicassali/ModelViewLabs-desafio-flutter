@@ -20,10 +20,9 @@ class PasswordValidator {
           'message': errorData['message'] ?? 'Erro na validação',
           'errors': errorData['errors'] ?? []
         };
-        // return {'message': 'Erro na requisição: Parâmetros inválidos', 'errors': []};
       } else if (response.statusCode == 503) {
         return {
-          'message': 'Erro na requisição: Serviço temporariamente indisponível. Tenten novamente',
+          'message': 'Erro na requisição: Serviço temporariamente indisponível. Tente novamente',
           'errors': []
         };
       } else {
@@ -35,4 +34,5 @@ class PasswordValidator {
     }
 
   }
+
 }
